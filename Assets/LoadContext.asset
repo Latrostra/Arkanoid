@@ -9,11 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 439dbbbaba5290e45bd654ded620b48d, type: 3}
-  m_Name: BrickThird
+  m_Script: {fileID: 11500000, guid: 09dccb87d5e607e4d954b5d441256d10, type: 3}
+  m_Name: LoadContext
   m_EditorClassIdentifier: 
-  Health: 3
-  Color:
-  - {r: 0.8207547, g: 0.08826979, b: 0.819111, a: 1}
-  - {r: 0.9150943, g: 0.09841575, b: 0.09841575, a: 1}
-  - {r: 1, g: 1, b: 1, a: 1}
+  Value: 0

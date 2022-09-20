@@ -23,4 +23,12 @@ public class Ball : MonoBehaviour
 
         this.rigidbody2D.AddForce(force.normalized * this.speed);
     }
+
+    private void OnCollisionEnter2D(Collision2D col) {
+        if (col != null) {
+            if (col.gameObject.tag == "EndCollider") {
+                FindObjectOfType<BootManager>().LoadScene(1);
+            }
+        }
+    }
 }

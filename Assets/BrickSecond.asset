@@ -12,8 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 439dbbbaba5290e45bd654ded620b48d, type: 3}
   m_Name: BrickSecond
   m_EditorClassIdentifier: 
-  Health: 3
+  Health: 2
   Color:
-  - {r: 1, g: 0, b: 0.925066, a: 1}
   - {r: 1, g: 0, b: 0, a: 1}
   - {r: 1, g: 1, b: 1, a: 1}

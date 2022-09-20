@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Brick : MonoBehaviour
 {
+    public int x;
+    public int y;
     public BrickSO brickSO;
     private SpriteRenderer spriteRenderer;
     private int currentHealth;
@@ -15,9 +17,11 @@ public class Brick : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D col) {
         if (col != null) {
-            ScoreManager.Instance.score.Value += currentHealth * 10;
+            ScoreManager.Instance.score.Value += 10 * currentHealth;
             currentHealth--;
+            MapManager.Instance.OnHit(x, y);
             if (currentHealth <= 0) {
+                MapManager.Instance.BrickDestroy(x, y);
                 Destroy(this.gameObject);
                 return;
             }
