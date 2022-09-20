@@ -21,7 +21,7 @@ public class Brick : MonoBehaviour
             currentHealth--;
             MapManager.Instance.OnHit(x, y);
             if (currentHealth <= 0) {
-                MapManager.Instance.BrickDestroy(x, y);
+                MapManager.Instance.BrickDestroy(x, y, this.transform.position.x, this.transform.position.y);
                 Destroy(this.gameObject);
                 return;
             }

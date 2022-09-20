@@ -5,7 +5,7 @@ using System;
 
 public class MapManager : MonoBehaviour
 {
-    public Action OnBrickDestroy;
+    public Action<float,float> OnBrickDestroy;
     public int[,] mapGrid;
     public static MapManager Instance;
     [SerializeField]
@@ -55,10 +55,10 @@ public class MapManager : MonoBehaviour
         brick.y = y;
     }
 
-    public void BrickDestroy(int x, int y) {
+    public void BrickDestroy(int x, int y, float xPos, float yPos) {
         mapGrid[x, y] = 0;
         brickCount--;
-        OnBrickDestroy?.Invoke();
+        OnBrickDestroy?.Invoke(xPos, yPos);
         if (brickCount <= 0) {
             FindObjectOfType<BootManager>().LoadScene(2);
         }
